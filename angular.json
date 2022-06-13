@@ -24,10 +24,18 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/favicon-16x16.png",
+              "src/favicon-32x32.png",
+              "src/apple-touch-icon.png",
+              "src/site.webmanifest"
+
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/primeng/resources/themes/md-light-indigo/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeicons/primeicons.css"
             ],
             "scripts": [],
             "vendorChunk": true,
@@ -71,7 +79,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "elevy-calculator:build"
+            "browserTarget": "elevy-calculator:build",
+            "port": 4203
           },
           "configurations": {
             "production": {

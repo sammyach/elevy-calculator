@@ -1,0 +1,128 @@
+.container{
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+.form{
+  padding-top: 3rem;
+  width: 300px;
+}
+
+.p-field{
+  margin-top: 1rem;
+  // padding-top: .5rem;
+}
+
+.c-label{
+  color: #6c757d;
+}
+
+.reset-btn{
+  float: right;
+  background: #fff;
+  border: none;
+  // margin-bottom: 1rem;
+  cursor: pointer;
+  color: #FFC107;
+  text-decoration: underline;
+
+  // text-align: right;
+  // color: #FFC107;
+  // font-size: .9rem;
+  // text-decoration: underline;
+  // cursor: pointer;
+}
+
+:host ::ng-deep .p-inputtext, :host ::ng-deep .p-password, :host ::ng-deep .p-button, :host ::ng-deep .p-dropdown {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+:host ::ng-deep .p-inputtext:enabled:hover, :host ::ng-deep .p-inputtext:enabled:focus, :host ::ng-deep .p-dropdown:enabled:hover, :host ::ng-deep .p-dropdown:not(.p-disabled).p-focus {
+  border-color: #FFC107;
+}
+
+:host ::ng-deep .p-inputtext:enabled:focus, :host ::ng-deep .p-dropdown:not(.p-disabled).p-focus{
+  box-shadow: inset 0 0 0 1px #FFC107, inset 0 0 0 1px #FFC107, inset 0 0 0 1px #FFC107, inset 0 0 0 1px #FFC107;
+}
+
+:host ::ng-deep .p-float-label input:focus ~ label, :host ::ng-deep .p-float-label .p-inputwrapper-focus ~ label{
+  color: #FFC107;
+}
+
+:host ::ng-deep .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+  color: #FFC107;
+  background: rgba(63, 81, 181, 0.12);
+}
+
+// :host ::ng-deep .p-dropdown:not(.p-disabled) .p-focus{
+//   box-shadow: inset 0 0 0 1px #FFC107, inset 0 0 0 1px #FFC107, inset 0 0 0 1px #FFC107, inset 0 0 0 1px #FFC107;
+
+// }
+
+:host ::ng-deep .p-button {
+  margin-top: 1rem;
+  color: #644d12;
+  background: #FFC107;
+}
+
+:host ::ng-deep .p-button:enabled:hover, :host ::ng-deep .p-button:enabled:focus {
+  background: #b08620;
+  color: #644d12;
+  border-color: transparent;
+}
+
+.summary{
+  // width: 300px;
+  margin-top: 1rem;
+  background: #fef0cd;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: #6c757d;
+  padding: 1rem;
+  font-size: .7rem;
+
+}
+
+table{
+  width: 100%;
+}
+
+.title{
+  text-align: center;
+}
+
+.pull-right{
+  text-align: right;
+}
+
+.total{
+  border-top: 1px solid #6c757d;
+  display: flex;
+  justify-content: space-between;
+}
+
+.final-amt{
+  font-size: 2rem;
+  color: #644d12;
+}
+
+@media (max-width: 786px) {
+  .form{
+    width: 100%;
+    padding: 5rem 1rem 1rem 1rem;
+  }
+  // .summary{
+  //   width: 100%;
+  //   // margin: 1rem;
+  // }
+
+
+}

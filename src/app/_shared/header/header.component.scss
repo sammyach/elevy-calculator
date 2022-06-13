@@ -1,0 +1,57 @@
+.header{
+  top: 0;
+  height: 4.5rem;
+  background: #FFC107;//1a61ac;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  position: sticky;
+  z-index: 10000;
+}
+
+.back-btn{
+  display: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.show-back-btn{
+  display: block;
+}
+
+a{
+  text-decoration: none;
+}
+
+.title a, .misc a{
+  color: #fff;
+}
+
+.misc{
+  display: flex;
+}
+
+.misc a{
+  padding-right: .5rem;
+  font-size: 1.2rem;
+  line-height: 2;
+}
+
+.icon{
+  cursor: pointer;
+}
+
+
+@media (max-width: 786px){
+  .header{
+    padding: 1rem;
+  }
+  .title{
+    font-size: 1.2rem;
+    line-height: 2.2;
+  }
+}
+

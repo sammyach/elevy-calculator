@@ -1,0 +1,16 @@
+<div class="header">
+  <!-- <div class="toggle-icon">
+    <span class="icon"><i class="pi pi-bars"></i></span>
+  </div> -->
+  <a [routerLink]="['/']" class="back-btn {{toggleClass}}">
+    <span class="icon"><i class="pi pi-arrow-left"></i></span>
+  </a>
+  <div class="title">
+    <a [routerLink]="['/']" >E-LEVY CALCULATOR</a>
+  </div>
+  <div class="misc">
+    <!-- <a [routerLink]="['/faq']" >FAQ</a> -->
+    <span (click)="menu.toggle($event)" class="icon"><i class="pi pi-ellipsis-v"></i></span>
+    <p-menu #menu [popup]="true" [model]="items"></p-menu>
+  </div>
+</div>

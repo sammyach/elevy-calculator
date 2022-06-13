@@ -12,6 +12,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.3.11",
+    "@angular/cdk": "^13.3.8",
     "@angular/common": "~13.3.11",
     "@angular/compiler": "~13.3.11",
     "@angular/core": "~13.3.11",
@@ -19,6 +20,13 @@
     "@angular/platform-browser": "~13.3.11",
     "@angular/platform-browser-dynamic": "~13.3.11",
     "@angular/router": "~13.3.11",
+    "@capacitor/android": "^3.5.1",
+    "@capacitor/angular": "^2.0.3",
+    "@capacitor/app": "^1.1.1",
+    "@capacitor/core": "latest",
+    "@capacitor/splash-screen": "^1.2.2",
+    "primeicons": "^5.0.0",
+    "primeng": "^13.4.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
@@ -40,6 +48,7 @@
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.6.4"
+    "typescript": "~4.6.4",
+    "@capacitor/cli": "latest"
   }
 }
