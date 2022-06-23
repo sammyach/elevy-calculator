@@ -7,4 +7,4 @@ This app is designed to help one obtain to a certain level of precision the amou
 
 Also note, this app does not take into consideration the number of transactions one has made in a day.
 
-
+Check out the web app [here](https://sammyach.github.io/elevy-calculator/)
