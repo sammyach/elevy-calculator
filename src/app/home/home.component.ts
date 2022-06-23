@@ -52,16 +52,24 @@ export class HomeComponent implements OnInit {
 
   onSubmit(){
     const e_levy = 1.5;
+    const SenderProviderRate = this.form.get('senderProviderRate').value;
+    const ReceiverProviderRate = this.form.get('receiverProviderRate').value;
+    this.InitialAmount = Number(this.form.get('amount').value);
+    console.log(this.InitialAmount);
+    if(SenderProviderRate === undefined || SenderProviderRate === null){
+      alert('Please select your network provider');
+      return;
+    }
+    if(ReceiverProviderRate === undefined || ReceiverProviderRate === null){
+      alert('Please select receipient\'s network provider');
+      return;
+    }
+    if(Number.isNaN(this.InitialAmount) || this.InitialAmount <= 0){
+      alert('Please enter a valid amount to send');
+      return;
+    }
+
     if(this.form.valid){
-      const SenderProviderRate = this.form.get('senderProviderRate').value;
-      const ReceiverProviderRate = this.form.get('receiverProviderRate').value;
-      console.log('from => ', SenderProviderRate);
-      console.log('to => ', ReceiverProviderRate);
-      this.InitialAmount = Number(this.form.get('amount').value);
-      if(this.InitialAmount < 0){
-        console.log('Enter a valid amount');
-        return;
-      }
       if(this.InitialAmount <=100){
         this.ElevyCharge = 0;
         this.elevyRateLabel = '';
@@ -70,9 +78,8 @@ export class HomeComponent implements OnInit {
         this.elevyRateLabel = `(${e_levy}%)`;
       }
 
-      // mtn to mtn
+      // mtn
       if(SenderProviderRate.Id == 1){
-        console.log('mtn to mtn');
         if(this.InitialAmount <= 50){
           this.ServiceCharge = 0.5;
           this.serviceRateLabel = '';
@@ -84,6 +91,14 @@ export class HomeComponent implements OnInit {
         if(this.InitialAmount > 1000){
           this.ServiceCharge = 10;
           this.serviceRateLabel = '';
+        }
+      }else if(SenderProviderRate.Id == 3){
+        if(ReceiverProviderRate.Id == 3){//tigo to tigo
+          this.ServiceCharge = Number(this.InitialAmount * 0.75 / 100);
+          this.serviceRateLabel = '(0.75%)';
+        }else{//tigo to others
+          this.ServiceCharge = Number(this.InitialAmount * 1.5 / 100);
+          this.serviceRateLabel = '(1.5%)';
         }
       }else{
         this.ServiceCharge = 0;
