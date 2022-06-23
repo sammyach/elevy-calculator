@@ -8,8 +8,53 @@
 }
 
 .form{
-  padding-top: 3rem;
-  width: 300px;
+  width: 100%;
+  padding: 2rem 1rem 1rem 1rem;
+}
+.final-amt{
+  // font-size: 2rem;
+  font-size: 1.2rem;
+  color: #644d12;
+  text-align: right;
+  word-wrap: break-word;
+  font-weight: 500;
+}
+
+.summary{
+  // width: 300px;
+  margin-top: 1rem;
+  background: #fef0cd;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: #6c757d;
+  // padding: 1rem;
+  // font-size: .7rem;
+  font-size: .6rem;
+  padding: .5rem;
+}
+
+.reset-btn{
+  float: right;
+  background: #fff;
+  border: none;
+  // margin-bottom: 1rem;
+  cursor: pointer;
+  color: #FFC107;
+  // text-decoration: underline;
+  font-size: .7rem;
+  // text-align: right;
+  // color: #FFC107;
+  // font-size: .9rem;
+  // text-decoration: underline;
+  // cursor: pointer;
+}
+
+
+:host ::ng-deep{
+  .p-dropdown.p-dropdown-clearable .p-dropdown-label, .p-button {
+    font-size: .9rem;
+  }
 }
 
 .p-field{
@@ -21,21 +66,7 @@
   color: #6c757d;
 }
 
-.reset-btn{
-  float: right;
-  background: #fff;
-  border: none;
-  // margin-bottom: 1rem;
-  cursor: pointer;
-  color: #FFC107;
-  text-decoration: underline;
 
-  // text-align: right;
-  // color: #FFC107;
-  // font-size: .9rem;
-  // text-decoration: underline;
-  // cursor: pointer;
-}
 
 :host ::ng-deep .p-inputtext, :host ::ng-deep .p-password, :host ::ng-deep .p-button, :host ::ng-deep .p-dropdown {
   width: 100%;
@@ -78,17 +109,8 @@
   border-color: transparent;
 }
 
-.summary{
-  // width: 300px;
-  margin-top: 1rem;
-  background: #fef0cd;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  color: #6c757d;
-  padding: 1rem;
-  font-size: .7rem;
-
+:host ::ng-deep .p-dropdown-items-wrapper{
+  max-height: fit-content !important;
 }
 
 table{
@@ -107,22 +129,38 @@ table{
   border-top: 1px solid #6c757d;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
 
-.final-amt{
-  font-size: 2rem;
-  color: #644d12;
+.total .pi{
+  padding-top: .5rem;
+  font-size: .7rem;
+  font-weight: 600;
 }
 
-@media (max-width: 786px) {
+.footer{
+  font-size: .7rem;
+  margin-top: .7rem;
+  text-align: center;
+  color: #6c757d;
+}
+
+.footer a{
+  color: #FFC107;
+}
+
+@media (min-width: 486px){
   .form{
-    width: 100%;
-    padding: 5rem 1rem 1rem 1rem;
+    padding-top: 3rem;
+    width: 300px;
   }
-  // .summary{
-  //   width: 100%;
-  //   // margin: 1rem;
-  // }
 
-
+  .final-amt{
+    font-size: 2rem;
+  }
+  .summary{
+    padding: 1rem;
+    font-size: .7rem;
+  }
 }
+
