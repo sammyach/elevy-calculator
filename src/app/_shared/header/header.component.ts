@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
 
     this.items = [
       {label: 'FAQ', icon: 'pi pi-fw pi-question-circle', url: '/faq'},
-      {label: 'About App', icon: 'pi pi-fw pi-info-circle', url: '/about'}
+      {label: 'Disclaimer', icon: 'pi pi-fw pi-info-circle', url: '/disclaimer'}
   ];
   }
 

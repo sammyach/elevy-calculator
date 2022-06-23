@@ -10,23 +10,17 @@
       </div>
 
 
-      <div class="p-field p-float-label">
+      <div style="margin-top: 2rem;" class="p-field p-float-label">
         <p-dropdown [options]="providerList" formControlName="senderProviderRate"  optionLabel="Name" [showClear]="true"></p-dropdown>
         <label class="c-label" for="Provider">Your Network Provider</label>
-
-      </div>
-      <div style="margin-top: 2rem;" class="p-field p-float-label">
-        <input class="c-input" type="text" formControlName="amount" pInputText />
-        <label class="c-label" for="Amount">Amount</label>
-
-        <!-- <div style="display: block;" class="p-input-icon-left">
-          <i class="pi pi-envelope"></i>
-        </div> -->
-        <!-- <span *ngIf="submitted && form.controls.username.errors?.required" style="color: red; font-size: .7rem;">Email is required</span> -->
       </div>
       <div class="p-field p-float-label">
         <p-dropdown [options]="providerList" formControlName="receiverProviderRate"  optionLabel="Name" [showClear]="true"></p-dropdown>
-        <label class="c-label" for="Provider">Reciepient's Network Provider</label>
+        <label class="c-label" for="Provider">Recipient's Network Provider</label>
+      </div>
+      <div class="p-field p-float-label">
+        <input class="c-input" type="text" formControlName="amount" pInputText />
+        <label class="c-label" for="Amount">Amount</label>
       </div>
       <button styleClass="p-button-sm" pButton type="submit" label="CALCULATE"></button>
 
@@ -53,7 +47,7 @@
           </table>
 
           <div class="total">
-            <div>Total</div>
+            <div>Total </div>
             <div class="final-amt">GHS {{FinalAmount | number:'1.2-2'}}</div>
           </div>
         </div>
@@ -61,5 +55,5 @@
     </form>
 
 
-
+    <p class="footer">Powered by <a href="https://nutonlabs.com" target="_blank">NutonLabs</a> | <a [routerLink]="['/disclaimer']">Disclaimer</a> </p>
 </div>
